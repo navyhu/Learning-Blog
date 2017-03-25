@@ -11,6 +11,9 @@ x + 2y = 3
 3 -5   y =  7
 ```
 
+##Basic Notation
+A ∈ R^m^\times^n
+
 ## Some concepts
 ### Matrix
 矩阵可以看成变换函数
