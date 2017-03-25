@@ -27,8 +27,28 @@ x + 2y = 3
        C_ij = sum{k=1}^n(A_ik * Bkj)  [sum{k=1}^n就是k为1到n时，参数的和]
 从公式中可以看成，乘法的前一个矩阵的列数与后一矩阵的行数要相等。
 ```
-### Vector Products
+### Vector-Vector Products
+#### Row Vector - Column Vector Product
+- Inner Product or Dot Product, 又叫内积或者点积，结果为一个实数a
+- x, y ∈ R^n, x^Ty ∈ R
+- 行向量与列向量相乘结果是一个实数, 值为行列向量对应元素乘积的和: x^Ty = sum{i=1}^n(x_i*y_i) 
+- 从几何角度看，如果x，y为二维向量，点积就是这两个向量以及他们的平行向量围成的平行四边形面积，如果是三维向量则为体积
 
+#### Column Vector - Row Vector Product
+- Outer Product, 外积a
+- x ∈ R^m, y ∈ R^n, xy^T ∈ R^m*n，外积结果为m*n矩阵
+- 结果矩阵中每个元素的值为对应列向量元素与相应行向量元素的乘积：(xy^T)_ij = x_i*y_j
+
+### Matrix-Vector Products
+#### Matrix - Column Vector Product
+- A ∈ R^m*n, x ∈ R^n, y = Ax = a_i^T * x ∈ R^m, 结果为一个m维向量
+- 如果把A看成由m个行向量组成的矩阵，那么 Ax 的第i个元素就是A中第i个行向量与x向量的点积（内积）
+- 如果把A看成由n个列向量组成的矩阵，那么 Ax 就是由A的各列向量相加组成，其中第i列的系数是x向量的第i个元素x_i: a1*x1 + a2*x2 + ... + an*xn
+ - 换句话说，y是A的列向量的**线性组合 Linear Combination**，其系数由x提供
+ 
+#### Row Vector - Matrix product
+
+### Matrix-Matrix Proudcts
 
 ## Some concepts
 ### Matrix
