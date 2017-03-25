@@ -41,14 +41,33 @@ x + 2y = 3
 
 ### Matrix-Vector Products
 #### Matrix - Column Vector Product
-- A ∈ R^m*n, x ∈ R^n, y = Ax = a_i^T * x ∈ R^m, 结果为一个m维向量
-- 如果把A看成由m个行向量组成的矩阵，那么 Ax 的第i个元素就是A中第i个行向量与x向量的点积（内积）
+- A ∈ R^m*n, x ∈ R^n, y = Ax = a_i^T * x ∈ R^m, 结果为一个m维列向量
+- 如果把A看成由m个行向量组成的矩阵，那么 Ax 的第i个元素就是A中第i个行向量与x向量的内积
 - 如果把A看成由n个列向量组成的矩阵，那么 Ax 就是由A的各列向量相加组成，其中第i列的系数是x向量的第i个元素x_i: a1*x1 + a2*x2 + ... + an*xn
- - 换句话说，y是A的列向量的**线性组合 Linear Combination**，其系数由x提供
+  - 换句话说，y是A的列向量的**线性组合 Linear Combination**，其系数由x提供
  
 #### Row Vector - Matrix product
+- x ∈ R^m, A ∈ R^m*n, y^T = x^T * A, y ∈ R^n，结果为一个n维行向量
+- 如果把A看成由n个列向量组成的矩阵，那么x^T * A的第i个元素就是x^T与A中第i个列向量的内积：[x^T * a1   x^T * a2   ...   x^T * a_n]
+- 如果把A看成由m个行向量组成的矩阵，那么x^T * A的结果就是A的行向量的线性组合，其系数是x向量中对应的元素
 
 ### Matrix-Matrix Proudcts
+#### View Matrix-Matrix Products as Vector-Vector Products
+- 通过对向量与向量以及向量与矩阵乘积的分析，我们可以把矩阵的乘法看成是矩阵中向量之间的乘法
+  - 从定义就可看出，矩阵乘积的元素(AB)_ij是A的第i个行向量与B的第i个列向量的内积，所以(AB)_ij = a_i^T * b_i
+- 如果把A看成由n个列向量组成的行向量，B看出由n个行向量组成的列向量，AB的结果就可以看出是所有列向量与对应行向量的外积的和
+
+#### View Matrix-Matrix Products as Matrix-Vector Products
+- 如果把B看成由p个列向量组成，那AB的第i列可看成是A与B中第i个列向量相乘的结果： c_i = Abi
+- 如果把A看成由m个行向量组成，那么AB的第i行可看成是A的第i个行向量与B的乘积: c_i^T = a_i^T * B
+
+#### Properties of Matrix Multiplication
+- 结合律：(AB)C = A(BC)
+- 分配率：A(B + C) = AB + AC
+- 不满足交换律：AB != BA
+
+## Operations and Properties
+
 
 ## Some concepts
 ### Matrix
