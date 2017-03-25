@@ -13,5 +13,7 @@
 - 强化学习(Reinforcement Learning)
   * 回报函数，跟训练狗相似，表现好就正反馈，表现不好就负反馈
   
-### Problems to Solve
-- 
+### Related Knowledge
+#### Linear Regression
+#### Gradient Descent
+#### Normal Equations
