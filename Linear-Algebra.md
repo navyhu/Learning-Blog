@@ -11,8 +11,14 @@ x + 2y = 3
 3 -5   y =  7
 ```
 
-##Basic Notation
-A ∈ R^m^\times^n
+## Basic Notation
+- R^m*n(m*n应该上标，但是github markdown貌似不支持上标语法)表示m行，n列类型的矩阵
+- A ∈ R^m*n, A是一个m行n列矩阵，其中的元素都是实数
+- x ∈ R^n(n为上标), x是一个n维列向量(Column Vector)，可以看成一个n*1矩阵。x也可以是一个n维行向量(Row Vector)，行向量一般用x^T（T为上标）表示，可以看成一个1*n矩阵。如果元素相同，x^T与x互为转置矩阵。
+- x_i（i为下标）表示向量的第i个元素
+- a_ij(ij为下标)表示矩阵A位于第i行，第j列的元素
+- a_j(j为下标)表示矩阵A的第j列向量
+- a_i^T(i为下标，T为上标)表示矩阵A的第i行向量
 
 ## Some concepts
 ### Matrix
