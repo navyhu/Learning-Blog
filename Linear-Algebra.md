@@ -75,11 +75,11 @@ x + 2y = 3
 #### Identity Matrix
 - 单位矩阵是对角线元素为1，其他元素为0的方阵，用I表示，I ∈ R^n*n
   - AI = A = IA
-    - for A ∈ R^m*n, I_n ∈ R^n*n, I_m ∈ R^m*m:  AI_n = A, A=I_mA
+    - for A ∈ R^m\*n, I_n ∈ R^n\*n, I_m ∈ R^m\*m:  AI_n = A, A=I_mA
 - 单位矩阵是特殊的对角矩阵: I = diag(1, 1, ..., 1)
 
 ### The Transpose
-- 矩阵A的转置是沿A的对角线翻转之后的矩阵，A ∈ R^m*n, A^T ∈ R^n*m
+- 矩阵A的转置是沿A的对角线翻转之后的矩阵，A ∈ R^m*\n, A^T ∈ R^n\*m
 - 转置矩阵的性质
   - (A^T)^T = A
   - (AB)^T = B^T*A^T
@@ -99,11 +99,73 @@ x + 2y = 3
 - 只有**方阵**才有迹(Trace), A ∈ R^n*n，A的迹用 tr(A)，或者trA表示，值为A所有对角线元素的和
   - trA = sum{i=1 - n}(A_ii)
 - 迹的性质
-  - A ∈ R^n*n, trA = tr(A^T)
-  - A, B ∈ R^n*n, tr(A + B) = trA + trB
-  - A ∈ R^n*n, t ∈ R, tr(tA) = t*trA
-  - For A, B, AB ∈ R^n*n, trAB = trBA
-  - For A, B, C, ABC ∈ R^n*n, trABC = trBCA = trCAB
+  - A ∈ R^n\*n, trA = tr(A^T)
+  - A, B ∈ R^n\*n, tr(A + B) = trA + trB
+  - A ∈ R^n\*n, t ∈ R, tr(tA) = t\*trA
+  - For A, B, AB ∈ R^n\*n, trAB = trBA
+  - For A, B, C, ABC ∈ R^n\*n, trABC = trBCA = trCAB
+
+### Norms
+- 向量的范数可以用来描述向量的长度
+- l_2 范数(||x||_2)又叫欧几里得范数，其值为向量各元素的平方和再开方
+  - 几何意义上，二维或三维空间中向量的长度就是它的l_2范数a
+  - (||x||_2)^2 = x^T \* x, 向量x的l_2范数的平方等于x的转置向量与x的乘积
+- 实际上范数可以看成一个映射函数，它把向量映射成一个实数，映射函数满足以下条件
+  - For x ∈ R&n, f(x) >= 0 (非负性)
+  - 只有当x = 0时，f(x) = 0 (确定性)
+  - For all x ∈ R^n, t ∈ R, f(tx) = |t|f(x) (齐次性)
+  - For all x, y ∈ R^n, f(x + y) <= f(x) + f(y) (三角不等式)
+    - 想象平面中的三角形，任意一边的长度都不大于另两边长度之和
+- 其他范数还有l_1范数，无穷范数等，他们共同定义如下(p>=1):
+  - ||x||_p = (sum{i=1 -n}(|x_i|^p))^(1/p)
+- 矩阵也有范数, 如Frobenius范数为 tr(A^T \* A) 的开方
+
+### Linear Indepdence and Rank
+#### Linear Independence
+- 对于一组向量{x1, x2, ..., xn} ⊂ R^m, 如果里面任意一个向量都不能表示为剩余向量的线性组合(Linear Combination)，那么就说它们是线性无关的
+- 相反，如果存在一个向量可以用剩余的向量的线性组合表示，这个向量组就是线性相关的
+- 从几何角度看，线性相关一般意味着存在平行向量或者0向量
+
+#### Rank
+- 一个矩阵A ∈ R^m\*n 的列秩(Column Rank)，就是该矩阵所有的列向量能组成的最大线性无关向量组大小
+  - 比如一个3\*3矩阵，如果其中一列可以用另两列的线性组合表示（而剩下的两列不能相互线性表示），那它的列秩就是2
+- 同样的，矩阵A ∈ R^m\*n 的行秩(Row Rank)，就是所有最大的线性无关行向量集合的大小
+- 矩阵的列秩和行秩相等，都可以用来作为矩阵的秩：rank(A)
+- 矩阵的秩有如下性质：
+  - For A ∈ R^m\*n, rank(A) <= min(m, n), if rank(A) = min(m, n), 那么就说A是满秩
+  - For A ∈ R^m\*n, rank(A) = rank(A^T)
+  - For A ∈ R^m\*n, B ∈ R^n\*p, rank(AB) <= min(rank(A), rank(B))
+  - For A, B ∈ R^m\*n, rank(A + B) <= rank(A) + rank(B)
+- 几何意义来看，矩阵的秩表示该矩阵能扩展成的空间的维度，比如一个3\*3矩阵，秩为2，那么说明有一个向量可以通过另两个向量线性组合来表示，几何上则表明这3个向量落在同一平面，他们只能表示该平面内的向量
+
+### The Inverse
+- 只有方阵A ∈ R^n\*n才有逆矩阵，但并非所有方阵都有逆矩阵（其中一个条件是满秩矩阵）
+- 矩阵A的逆矩阵表示为A^(-1)
+- 矩阵与其逆矩阵相乘的结果为单位矩阵A^(-1) \* A = I = A \* A^(-1)
+- 如果A的逆矩阵存在，就说A是可逆的(invertible)，或者是非奇异的(non-singular)
+- 如果A不存在逆矩阵，就说A是不可逆的(non-invertible)，或者奇异的(singular)
+- 逆矩阵的性质(A, B ∈ R^n\*n)
+  - (A^-1)^-1 = A 矩阵与其逆矩阵互逆
+  - (AB)^-1 = B^-1 \* A^-1
+  - (A^-1)^T = (A^T)^-1, 写成A^(-T)
+- 逆矩阵可以用于求解方程组，Ax = b，那么x = A^-1 \* b，解后面的矩阵-向量乘法就可得到x的解
+
+### Orthogonal Matrices
+- 向量x, y ∈ R^n, 如果x^T \* y = 0, 那么就说x和y正交
+- 向量x ∈ R^n, 如果x的l_2范数 ||x||_2 = 1，就说x是标准化向量
+- 对于方阵 U ∈ R^n\*n, 如果所有列向量相互正交，并且都是标准化向量，就说矩阵U是正交矩阵
+  - 正交矩阵的列矩阵就说标准正交的
+  - U^T \* U = I = U \* U^T
+  - 通过上一个性质可以得出正交矩阵U的转置矩阵就是它的逆矩阵：U^-1 = U^T
+  - 正交矩阵与向量相乘不会改变向量的l_2范数, x ∈ R^n, U ∈ R^n\*n
+    - ||Ux||_2 = ||x||_2
+
+### Range and Nullspace of a Matrix
+#### Span
+
+#### Range
+#### Nullspace
+
 
 ## Some concepts
 ### Matrix
