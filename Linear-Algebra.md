@@ -67,7 +67,43 @@ x + 2y = 3
 - 不满足交换律：AB != BA
 
 ## Operations and Properties
+### Identity Matrix and Diagonal Matrices
+#### Diagonal Matrices
+- 除对角线外，其他元素都为0的方阵，叫对角矩阵
+- 对角矩阵表示为 D = diag(d1, d2, ..., dn), where Dii = di
 
+#### Identity Matrix
+- 单位矩阵是对角线元素为1，其他元素为0的方阵，用I表示，I ∈ R^n*n
+  - AI = A = IA
+    - for A ∈ R^m*n, I_n ∈ R^n*n, I_m ∈ R^m*m:  AI_n = A, A=I_mA
+- 单位矩阵是特殊的对角矩阵: I = diag(1, 1, ..., 1)
+
+### The Transpose
+- 矩阵A的转置是沿A的对角线翻转之后的矩阵，A ∈ R^m*n, A^T ∈ R^n*m
+- 转置矩阵的性质
+  - (A^T)^T = A
+  - (AB)^T = B^T*A^T
+  - (A + B)^T = A^T + B^T
+ 
+### Symetric Matrices
+- A ∈ R^n*n
+  - 如果 A = A^T，那么A是一个对称矩阵
+  - 如果 A = -A^T，那么A是一个反对称矩阵
+  - 矩阵 A + A^T 一定是一个对称矩阵
+  - 而 A - A^T 是一个反对称矩阵
+  - 任何一个方阵都可以用对称和反对称矩阵来表示
+    - A = 1/2(A + A^T) + 1/2(A - A^T)
+- S^n来表示n维对称矩阵合集，A ∈ S^n，则A为n维对称矩阵
+
+### The Trace
+- 只有**方阵**才有迹(Trace), A ∈ R^n*n，A的迹用 tr(A)，或者trA表示，值为A所有对角线元素的和
+  - trA = sum{i=1 - n}(A_ii)
+- 迹的性质
+  - A ∈ R^n*n, trA = tr(A^T)
+  - A, B ∈ R^n*n, tr(A + B) = trA + trB
+  - A ∈ R^n*n, t ∈ R, tr(tA) = t*trA
+  - For A, B, AB ∈ R^n*n, trAB = trBA
+  - For A, B, C, ABC ∈ R^n*n, trABC = trBCA = trCAB
 
 ## Some concepts
 ### Matrix
