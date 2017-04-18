@@ -14,5 +14,5 @@
 * 定理六 对于任意事件A，B  **Pr(A ∩ B^c) = Pr(A) - Pr(A ∩ B)**
 * 定理七 对于任意事件A，B  **Pr(A ∪ B) = Pr(A) + Pr(B) − Pr(A ∩ B)**
 * 定理八 Bonferroni inequality, 对于所有事件A1, A2, ..., An, A_Intersection = A1 ∩ A2 ∩ ... ∩ An, A_Union = A1 ∪ A2 ∪ ... ∪ An
-        **Pr(A_Union) <= sum\<i = 1 to n>(Pr(Ai)**
+        **Pr(A_Union) <= sum\<i = 1 to n>(Pr(Ai)**   and   
         **Pr(A_Intersection) >= 1 - sum\<i = 1 to n>(Pr(Ai^c)**
