@@ -97,13 +97,13 @@ x + 2y = 3
 
 ### The Trace
 - 只有**方阵**才有迹(Trace), A ∈ R^n*n，A的迹用 tr(A)，或者trA表示，值为A所有对角线元素的和
-  - trA = sum{i=1 - n}(A_ii)
+ - trA = sum{i=1 - n}(A_ii)
 - 迹的性质
-  - A ∈ R^n\*n, trA = tr(A^T)
-  - A, B ∈ R^n\*n, tr(A + B) = trA + trB
-  - A ∈ R^n\*n, t ∈ R, tr(tA) = t\*trA
-  - For A, B, AB ∈ R^n\*n, trAB = trBA
-  - For A, B, C, ABC ∈ R^n\*n, trABC = trBCA = trCAB
+ - A ∈ R^n\*n, trA = tr(A^T)
+ - A, B ∈ R^n\*n, tr(A + B) = trA + trB
+ - A ∈ R^n\*n, t ∈ R, tr(tA) = t\*trA
+ - For A, B, AB ∈ R^n\*n, trAB = trBA
+ - For A, B, C, ABC ∈ R^n\*n, trABC = trBCA = trCAB
 
 ### Norms
 - 向量的范数可以用来描述向量的长度
