@@ -12,9 +12,9 @@ x + 2y = 3
 ```
 
 ## Basic Notation
-- R^m*n(m*n应该上标，但是github markdown貌似不支持上标语法)表示m行，n列矩阵
-- A ∈ R^m*n, A是一个m行n列矩阵，其中的元素都是实数
-- x ∈ R^n(n为上标), x是一个n维列向量(Column Vector)，可以看成一个n*1矩阵。x也可以是一个n维行向量(Row Vector)，行向量一般用x^T（T为上标）表示，可以看成一个1*n矩阵。如果元素相同，x^T与x互为转置矩阵（Transpose Matrix）。
+- R^m\*n(m\*n应该上标，但是github markdown貌似不支持上标语法)表示m行，n列矩阵
+- A ∈ R^m\*n, A是一个m行n列矩阵，其中的元素都是实数
+- x ∈ R^n(n为上标), x是一个n维列向量(Column Vector)，可以看成一个n\*1矩阵。x也可以是一个n维行向量(Row Vector)，行向量一般用x^T（T为上标）表示，可以看成一个1\*n矩阵。如果元素相同，x^T与x互为转置矩阵（Transpose Matrix）。
 - x_i（i为下标）表示向量的第i个元素
 - a_ij(ij为下标)表示矩阵A位于第i行，第j列的元素
 - a_j(j为下标)表示矩阵A的第j列向量
@@ -31,30 +31,30 @@ x + 2y = 3
 #### Row Vector - Column Vector Product
 - Inner Product or Dot Product, 又叫内积或者点积，结果为一个实数a
 - x, y ∈ R^n, x^Ty ∈ R
-- 行向量与列向量相乘结果是一个实数, 值为行列向量对应元素乘积的和: x^Ty = sum{i=1}^n(x_i*y_i) 
+- 行向量与列向量相乘结果是一个实数, 值为行列向量对应元素乘积的和: x^Ty = sum{i=1}^n(x_i\*y_i) 
 - 从几何角度看，如果x，y为二维向量，点积就是这两个向量以及他们的平行向量围成的平行四边形面积，如果是三维向量则为体积
 
 #### Column Vector - Row Vector Product
 - Outer Product, 外积a
-- x ∈ R^m, y ∈ R^n, xy^T ∈ R^m*n，外积结果为m*n矩阵
+- x ∈ R^m, y ∈ R^n, xy^T ∈ R^m\*n，外积结果为m\*n矩阵
 - 结果矩阵中每个元素的值为对应列向量元素与相应行向量元素的乘积：(xy^T)_ij = x_i*y_j
 
 ### Matrix-Vector Products
 #### Matrix - Column Vector Product
-- A ∈ R^m*n, x ∈ R^n, y = Ax = a_i^T * x ∈ R^m, 结果为一个m维列向量
+- A ∈ R^m\*n, x ∈ R^n, y = Ax = a_i^T * x ∈ R^m, 结果为一个m维列向量
 - 如果把A看成由m个行向量组成的矩阵，那么 Ax 的第i个元素就是A中第i个行向量与x向量的内积
-- 如果把A看成由n个列向量组成的矩阵，那么 Ax 就是由A的各列向量相加组成，其中第i列的系数是x向量的第i个元素x_i: a1*x1 + a2*x2 + ... + an*xn
+- 如果把A看成由n个列向量组成的矩阵，那么 Ax 就是由A的各列向量相加组成，其中第i列的系数是x向量的第i个元素x_i: a1\*x1 + a2\*x2 + ... + an\*xn
   - 换句话说，y是A的列向量的**线性组合 Linear Combination**，其系数由x提供
  
 #### Row Vector - Matrix product
-- x ∈ R^m, A ∈ R^m*n, y^T = x^T * A, y ∈ R^n，结果为一个n维行向量
+- x ∈ R^m, A ∈ R^m\*n, y^T = x^T * A, y ∈ R^n，结果为一个n维行向量
 - 如果把A看成由n个列向量组成的矩阵，那么x^T * A的第i个元素就是x^T与A中第i个列向量的内积：[x^T * a1   x^T * a2   ...   x^T * a_n]
 - 如果把A看成由m个行向量组成的矩阵，那么x^T * A的结果就是A的行向量的线性组合，其系数是x向量中对应的元素
 
 ### Matrix-Matrix Proudcts
 #### View Matrix-Matrix Products as Vector-Vector Products
 - 通过对向量与向量以及向量与矩阵乘积的分析，我们可以把矩阵的乘法看成是矩阵中向量之间的乘法
-  - 从定义就可看出，矩阵乘积的元素(AB)_ij是A的第i个行向量与B的第i个列向量的内积，所以(AB)_ij = a_i^T * b_i
+  - 从定义就可看出，矩阵乘积的元素(AB)\_ij是A的第i个行向量与B的第i个列向量的内积，所以(AB)\_ij = a_i^T * b_i
 - 如果把A看成由n个列向量组成的行向量，B看出由n个行向量组成的列向量，AB的结果就可以看出是所有列向量与对应行向量的外积的和
 
 #### View Matrix-Matrix Products as Matrix-Vector Products
@@ -73,20 +73,20 @@ x + 2y = 3
 - 对角矩阵表示为 D = diag(d1, d2, ..., dn), where Dii = di
 
 #### Identity Matrix
-- 单位矩阵是对角线元素为1，其他元素为0的方阵，用I表示，I ∈ R^n*n
+- 单位矩阵是对角线元素为1，其他元素为0的方阵，用I表示，I ∈ R^n\*n
   - AI = A = IA
     - for A ∈ R^m\*n, I_n ∈ R^n\*n, I_m ∈ R^m\*m:  AI_n = A, A=I_mA
 - 单位矩阵是特殊的对角矩阵: I = diag(1, 1, ..., 1)
 
 ### The Transpose
-- 矩阵A的转置是沿A的对角线翻转之后的矩阵，A ∈ R^m*\n, A^T ∈ R^n\*m
+- 矩阵A的转置是沿A的对角线翻转之后的矩阵，A ∈ R^m\*\n, A^T ∈ R^n\*m
 - 转置矩阵的性质
   - (A^T)^T = A
-  - (AB)^T = B^T*A^T
+  - (AB)^T = B^T\*A^T
   - (A + B)^T = A^T + B^T
  
 ### Symetric Matrices
-- A ∈ R^n*n
+- A ∈ R^n\*n
   - 如果 A = A^T，那么A是一个对称矩阵
   - 如果 A = -A^T，那么A是一个反对称矩阵
   - 矩阵 A + A^T 一定是一个对称矩阵
@@ -96,20 +96,20 @@ x + 2y = 3
 - S^n来表示n维对称矩阵合集，A ∈ S^n，则A为n维对称矩阵
 
 ### The Trace
-- 只有**方阵**才有迹(Trace), A ∈ R^n*n，A的迹用 tr(A)，或者trA表示，值为A所有对角线元素的和
- - trA = sum{i=1 - n}(A_ii)
+- 只有**方阵**才有迹(Trace), A ∈ R^n\*n，A的迹用 tr(A)，或者trA表示，值为A所有对角线元素的和
+  - trA = sum{i=1 - n}(A_ii)
 - 迹的性质
- - A ∈ R^n\*n, trA = tr(A^T)
- - A, B ∈ R^n\*n, tr(A + B) = trA + trB
- - A ∈ R^n\*n, t ∈ R, tr(tA) = t\*trA
- - For A, B, AB ∈ R^n\*n, trAB = trBA
- - For A, B, C, ABC ∈ R^n\*n, trABC = trBCA = trCAB
+  - A ∈ R^n\*n, trA = tr(A^T)
+  - A, B ∈ R^n\*n, tr(A + B) = trA + trB
+  - A ∈ R^n\*n, t ∈ R, tr(tA) = t\*trA
+  - For A, B, AB ∈ R^n\*n, trAB = trBA
+  - For A, B, C, ABC ∈ R^n\*n, trABC = trBCA = trCAB
 
 ### Norms
 - 向量的范数可以用来描述向量的长度
-- l_2 范数(||x||_2)又叫欧几里得范数，其值为向量各元素的平方和再开方
+- l_2 范数(||x||\_2)又叫欧几里得范数，其值为向量各元素的平方和再开方
   - 几何意义上，二维或三维空间中向量的长度就是它的l_2范数a
-  - (||x||_2)^2 = x^T \* x, 向量x的l_2范数的平方等于x的转置向量与x的乘积
+  - (||x||\_2)^2 = x^T \* x, 向量x的l_2范数的平方等于x的转置向量与x的乘积
 - 实际上范数可以看成一个映射函数，它把向量映射成一个实数，映射函数满足以下条件
   - For x ∈ R&n, f(x) >= 0 (非负性)
   - 只有当x = 0时，f(x) = 0 (确定性)
@@ -117,7 +117,7 @@ x + 2y = 3
   - For all x, y ∈ R^n, f(x + y) <= f(x) + f(y) (三角不等式)
     - 想象平面中的三角形，任意一边的长度都不大于另两边长度之和
 - 其他范数还有l_1范数，无穷范数等，他们共同定义如下(p>=1):
-  - ||x||_p = (sum{i=1 -n}(|x_i|^p))^(1/p)
+  - ||x||\_p = (sum{i=1 -n}(|x_i|^p))^(1/p)
 - 矩阵也有范数, 如Frobenius范数为 tr(A^T \* A) 的开方
 
 ### Linear Indepdence and Rank
