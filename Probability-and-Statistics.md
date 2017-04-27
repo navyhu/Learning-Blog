@@ -16,3 +16,8 @@
 * 定理八 Bonferroni inequality, 对于所有事件A1, A2, ..., An, A_Intersection = A1 ∩ A2 ∩ ... ∩ An, A_Union = A1 ∪ A2 ∪ ... ∪ An
         **Pr(A_Union) <= sum\<i = 1 to n>(Pr(Ai)**   and   
         **Pr(A_Intersection) >= 1 - sum\<i = 1 to n>(Pr(Ai^c)**
+
+###一些概念
+* Simple Sample Space, 简单样本空间
+ - 一个有n个可能结果的Sample Space，如果每一种结果的可能性都是 1/n, 这个Sample Space就是一个Simple Sample Space
+ 
