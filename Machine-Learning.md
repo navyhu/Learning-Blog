@@ -12,8 +12,26 @@
   * 可以把图片分成不同区域
 - 强化学习(Reinforcement Learning)
   * 回报函数，跟训练狗相似，表现好就正反馈，表现不好就负反馈
-  
-### Related Knowledge
-#### Linear Regression
-#### Gradient Descent
-#### Normal Equations
+
+## Model representation
+x(i) :第i个输入变量
+
+## Linear Regression
+### Linear Regression with one variable
+- Hypothesis 预测函数
+  - hθ(x) = θ0 + θ1 \* x;
+  - hθ(x) = θ\*X; (矩阵形式)
+
+- Cost Function 代价函数
+  - J(θ0, θ1) = (1/2m) * sum(i = 1, m)[(hθ(x(i)) - y(i))^2];
+  - m为训练集(X)数量
+
+- Goal
+  - 选取θ0, θ1, 使J(θ0, θ1)最小
+
+#### Gradient Descent 梯度下降获取θ
+- 步骤
+  - 选取初始θ值
+  - 改变θ值使J(θ)变小，直到取到J(θ)最小值
+
+
