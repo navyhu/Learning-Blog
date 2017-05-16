@@ -54,7 +54,7 @@ x + 2y = 3
 ### Matrix-Matrix Proudcts
 #### View Matrix-Matrix Products as Vector-Vector Products
 - 通过对向量与向量以及向量与矩阵乘积的分析，我们可以把矩阵的乘法看成是矩阵中向量之间的乘法
-  - 从定义就可看出，矩阵乘积的元素(AB)\_ij是A的第i个行向量与B的第i个列向量的内积，所以(AB)\_ij = a_i^T * b_i
+  * 从定义就可看出，矩阵乘积的元素(AB)\_ij是A的第i个行向量与B的第i个列向量的内积，所以(AB)\_ij = a_i^T * b_i
 - 如果把A看成由n个列向量组成的行向量，B看出由n个行向量组成的列向量，AB的结果就可以看出是所有列向量与对应行向量的外积的和
 
 #### View Matrix-Matrix Products as Matrix-Vector Products
